@@ -1056,7 +1056,7 @@ const JobDetailsPage: React.FC = () => {
                             {/* Applied Date */}
                             <div className="flex-1 sm:flex-initial sm:border-l sm:border-gray-200 sm:pl-8">
                                 <div className="flex flex-col items-center sm:items-end px-3 sm:px-4 py-2 bg-white/50 backdrop-blur-md rounded-xl border border-white/60 shadow-[0_2px_8px_rgba(0,0,0,0.02)] w-full">
-                                    <p className="text-[10px] text-gray-400 uppercase tracking-wider font-bold mb-0.5">Applied on</p>
+                                    <p className="text-[10px] text-gray-500 uppercase tracking-wider font-bold mb-0.5">Applied on</p>
                                     <span className="text-xs sm:text-sm font-bold text-gray-900 font-mono">
                                         {new Date(job.date).toLocaleDateString('en-GB')}
                                     </span>
@@ -1134,9 +1134,10 @@ const JobDetailsPage: React.FC = () => {
                                                 })()}
                                             </div>
                                             <span className={`
-                                            text-[11px] font-bold uppercase tracking-wider text-center whitespace-nowrap px-2 py-1 rounded-lg transition-colors
-                                            ${isActive ? `text-${col.color}-700 bg-${col.color}-50` : isVisited ? 'text-gray-900 font-semibold' : 'text-gray-400 font-medium'}
+                                            flex flex-col items-center text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-center whitespace-nowrap px-2 py-1 rounded-lg transition-colors
+                                            ${isActive ? `text-${col.color}-700 bg-${col.color}-50` : isVisited ? 'text-gray-900 font-semibold' : 'text-gray-500 font-medium'}
                                         `}>
+                                                <span className="text-[9px] opacity-60 mb-0.5">Stage {linearStages.indexOf(cid) + 1}</span>
                                                 {col.id === 'saved' ? 'Wishlist' : col.title}
                                             </span>
                                         </button>
@@ -1216,11 +1217,14 @@ const JobDetailsPage: React.FC = () => {
                                 )}
 
                                 {activeTab === 'reflection' && (
-                                    <div className="p-6 bg-red-50/30 min-h-[400px]">
-                                        <h3 className="text-lg font-bold text-red-800 mb-6 flex items-center gap-2 font-sans">
-                                            <span className="p-1.5 bg-red-100 rounded-lg"><MoreVertical size={16} className="text-red-600" /></span>
-                                            Reflection & Improvements
-                                        </h3>
+                                    <div className="p-6 bg-red-50/50 min-h-[400px]">
+                                        <div className="mb-6 flex items-center justify-between">
+                                            <h3 className="text-lg font-bold text-red-800 flex items-center gap-2 font-sans">
+                                                <span className="p-1.5 bg-red-100 rounded-lg"><XCircle size={16} className="text-red-600" /></span>
+                                                Learning Loop: Reflections
+                                            </h3>
+                                            <span className="text-[10px] font-bold text-red-600 bg-red-100/50 px-2.5 py-1 rounded-full uppercase tracking-wider">Post-Mortem</span>
+                                        </div>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                             <div>
@@ -1284,7 +1288,7 @@ const JobDetailsPage: React.FC = () => {
                                 <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
                                     <CheckCircle size={16} className="text-gray-400" /> To-Do List
                                 </h3>
-                                <span className="text-[10px] font-bold text-gray-400 bg-gray-50 px-2 py-0.5 rounded-full">
+                                <span className="text-[10px] font-bold text-gray-500 bg-gray-50 px-2 py-0.5 rounded-full">
                                     {tasks.filter(t => t.completed).length}/{tasks.length}
                                 </span>
                             </div>
@@ -1337,7 +1341,7 @@ const JobDetailsPage: React.FC = () => {
                             <div className="space-y-4">
                                 <div className="grid grid-cols-2 gap-3">
                                     <div>
-                                        <label className="block text-[10px] font-bold text-gray-400 uppercase mb-1">Source</label>
+                                        <label className="block text-[10px] font-bold text-gray-500 uppercase mb-1">Source</label>
                                         <div className="relative">
                                             <select
                                                 value={source}
@@ -1398,35 +1402,50 @@ const JobDetailsPage: React.FC = () => {
                                     className="w-full text-sm font-bold text-gray-900 placeholder:text-gray-300 bg-transparent border-none focus:ring-0 p-0 outline-none"
                                 />
                                 <div className="space-y-2">
-                                    <div className="flex items-center gap-2 text-gray-500">
-                                        <Mail size={14} className="shrink-0" />
+                                    <div className="flex items-center gap-2 text-gray-500 group">
+                                        <Mail size={14} className="shrink-0 group-focus-within:text-blue-500 transition-colors" />
                                         <input
                                             type="email"
                                             value={recruiter?.email || ''}
                                             onChange={(e) => setRecruiter({ ...recruiter, email: e.target.value })}
                                             placeholder="Email address"
-                                            className="w-full text-xs bg-transparent border-none focus:ring-0 p-0 outline-none"
+                                            className="flex-1 text-xs bg-transparent border-none focus:ring-0 p-0 outline-none"
                                         />
+                                        {recruiter?.email && (
+                                            <a href={`mailto:${recruiter.email}`} className="p-1 hover:bg-blue-50 rounded text-blue-600 transition-colors">
+                                                <ExternalLink size={12} />
+                                            </a>
+                                        )}
                                     </div>
-                                    <div className="flex items-center gap-2 text-gray-500">
-                                        <Linkedin size={14} className="shrink-0" />
+                                    <div className="flex items-center gap-2 text-gray-500 group">
+                                        <Linkedin size={14} className="shrink-0 group-focus-within:text-blue-500 transition-colors" />
                                         <input
                                             type="text"
                                             value={recruiter?.linkedin || ''}
                                             onChange={(e) => setRecruiter({ ...recruiter, linkedin: e.target.value })}
                                             placeholder="LinkedIn profile URL"
-                                            className="w-full text-xs bg-transparent border-none focus:ring-0 p-0 outline-none"
+                                            className="flex-1 text-xs bg-transparent border-none focus:ring-0 p-0 outline-none"
                                         />
+                                        {recruiter?.linkedin && (
+                                            <a href={recruiter.linkedin.startsWith('http') ? recruiter.linkedin : `https://${recruiter.linkedin}`} target="_blank" rel="noopener noreferrer" className="p-1 hover:bg-blue-50 rounded text-blue-600 transition-colors">
+                                                <ExternalLink size={12} />
+                                            </a>
+                                        )}
                                     </div>
-                                    <div className="flex items-center gap-2 text-gray-500">
-                                        <Phone size={14} className="shrink-0" />
+                                    <div className="flex items-center gap-2 text-gray-500 group">
+                                        <Phone size={14} className="shrink-0 group-focus-within:text-blue-500 transition-colors" />
                                         <input
                                             type="text"
                                             value={recruiter?.phone || ''}
                                             onChange={(e) => setRecruiter({ ...recruiter, phone: e.target.value })}
                                             placeholder="Phone number"
-                                            className="w-full text-xs bg-transparent border-none focus:ring-0 p-0 outline-none"
+                                            className="flex-1 text-xs bg-transparent border-none focus:ring-0 p-0 outline-none"
                                         />
+                                        {recruiter?.phone && (
+                                            <a href={`tel:${recruiter.phone}`} className="p-1 hover:bg-blue-50 rounded text-blue-600 transition-colors">
+                                                <ExternalLink size={12} />
+                                            </a>
+                                        )}
                                     </div>
                                 </div>
                             </div>

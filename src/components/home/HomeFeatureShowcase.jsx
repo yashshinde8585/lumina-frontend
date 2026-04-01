@@ -17,7 +17,7 @@ const HomeFeatureShowcase = () => {
                         Everything you need <br />
                         <span className="text-blue-600">for your job search.</span>
                     </h2>
-                    <p className="mt-4 text-lg text-gray-500">
+                    <p className="mt-4 text-lg text-gray-500 leading-relaxed">
                         Manage your resume and your applications in one professional workflow. Our tools help you focus on getting hired.
                     </p>
                 </div>

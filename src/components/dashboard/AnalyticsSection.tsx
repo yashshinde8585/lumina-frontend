@@ -143,7 +143,7 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({ columns, onFunnelCl
                         <div className="mb-6 flex flex-row items-start justify-between gap-4">
                             <div>
                                 <h3 className="text-base sm:text-lg font-bold text-gray-900">
-                                    Job Search Velocity
+                                    Application Progress
                                 </h3>
                             </div>
 
@@ -204,8 +204,8 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({ columns, onFunnelCl
                         {isEmpty ? (
                             <div className="h-[250px] flex flex-col items-center justify-center bg-gray-50 rounded-lg border-2 border-dashed border-gray-200">
                                 <TrendingUp size={48} className="text-gray-300 mb-4" />
-                                <p className="text-gray-500 font-medium mb-2">No applications yet</p>
-                                <p className="text-sm text-gray-400 mb-4">Start tracking your job search journey</p>
+                                <p className="text-gray-500 font-medium mb-2">No applications found</p>
+                                <p className="text-sm text-gray-400 mb-4">Add your first application to see your progress here.</p>
                                 <button
                                     onClick={() => navigate('/generate')}
                                     className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
@@ -305,7 +305,7 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({ columns, onFunnelCl
                                                             </div>
                                                             {isTargetMet && (
                                                                 <p className="text-[10px] font-bold mt-2 text-green-600">
-                                                                    Target Met!
+                                                                    Goal Reached!
                                                                 </p>
                                                             )}
 
@@ -453,7 +453,7 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({ columns, onFunnelCl
                     <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.04)] flex flex-col h-full">
                         <div className="flex items-center justify-between mb-6">
                             <h3 className="text-base sm:text-lg font-bold text-gray-900">
-                                Application Rejections
+                                Application Outcomes
                             </h3>
                         </div>
 
@@ -536,8 +536,8 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({ columns, onFunnelCl
                                     <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-sm mb-3">
                                         <XCircle size={24} className="text-gray-300" />
                                     </div>
-                                    <p className="text-sm font-medium text-gray-500">No rejection data available yet.</p>
-                                    <p className="text-xs text-gray-400 mt-1">Keep applying to build your insights!</p>
+                                    <p className="text-sm font-medium text-gray-500">No outcomes recorded yet.</p>
+                                    <p className="text-xs text-gray-400 mt-1">Your stats will appear as you update your application status.</p>
                                 </div>
                             )}
                         </div>
@@ -559,8 +559,8 @@ const AnalyticsSection: React.FC<AnalyticsSectionProps> = ({ columns, onFunnelCl
                                         <Target size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="text-lg font-bold text-gray-900">Set Your Goals</h3>
-                                        <p className="text-sm text-gray-500">How many applications per day?</p>
+                                        <h3 className="text-lg font-bold text-gray-900">Set your daily goal</h3>
+                                        <p className="text-sm text-gray-500">Select the number of applications you want to submit each day.</p>
                                     </div>
                                 </div>
 

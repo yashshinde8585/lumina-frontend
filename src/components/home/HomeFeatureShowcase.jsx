@@ -14,11 +14,11 @@ const HomeFeatureShowcase = () => {
                 {/* Section Header */}
                 <div className="text-center max-w-2xl mx-auto mb-16">
                     <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-                        Two powerful tools. <br />
-                        <span className="text-blue-600">One complete workflow.</span>
+                        Everything you need <br />
+                        <span className="text-blue-600">for your job search.</span>
                     </h2>
                     <p className="mt-4 text-lg text-gray-500">
-                        Stop switching between AI tools and spreadsheets. Build your resume and track its success in the same place.
+                        Manage your resume and your applications in one professional workflow. Our tools help you focus on getting hired.
                     </p>
                 </div>
 
@@ -41,9 +41,9 @@ const HomeFeatureShowcase = () => {
                                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-medium mb-6">
                                     <Wand2 size={12} /> Resume Builder
                                 </div>
-                                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Target every application.</h3>
+                                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Tailored for Success.</h3>
                                 <p className="text-gray-500 leading-relaxed mb-8 text-sm sm:text-base">
-                                    Our AI analyzes job descriptions in real-time, rewriting your bullets to match keywords and pass ATS filters.
+                                    Our builder ensures your resume matches the job requirements and passes digital application filters.
                                 </p>
                             </div>
 
@@ -91,9 +91,9 @@ const HomeFeatureShowcase = () => {
                                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gray-100 text-gray-600 text-xs font-medium mb-6">
                                     <LayoutDashboard size={12} /> Job Tracker
                                 </div>
-                                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">No more spreadsheets.</h3>
+                                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Total Organization.</h3>
                                 <p className="text-gray-500 leading-relaxed mb-8 text-sm sm:text-base">
-                                    Visualize your pipeline. Move applications from "Applied" to "Interview" with a simple drag-and-drop board.
+                                    Track your progress from application to interview with our easy-to-use dashboard.
                                 </p>
                             </div>
 

@@ -36,8 +36,8 @@ const HomeHero = () => {
                         transition={{ delay: 0.1 }}
                         className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
                     >
-                        Master your job search <br className="hidden lg:block" />
-                        from <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">first draft</span> to final offer.
+                        Build your career path <br className="hidden lg:block" />
+                        with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">confidence</span>.
                     </motion.h1>
 
                     {/* Subheadline */}
@@ -47,7 +47,7 @@ const HomeHero = () => {
                         transition={{ delay: 0.2 }}
                         className="text-base md:text-lg text-gray-500 leading-relaxed mb-8 max-w-lg"
                     >
-                        Build ATS-optimized resumes in seconds and manage your entire application pipeline in one powerful dashboard.
+                        Create a professional resume and track your job applications in one simple place. Our tools help you stand out and stay organized.
                     </motion.p>
 
                     {/* Dual Feature Showcase (Buttons) */}
@@ -66,10 +66,10 @@ const HomeHero = () => {
                                 </div>
                                 <div className="flex-1">
                                     <div className="font-bold text-base text-gray-900 flex items-center gap-2">
-                                        AI-Powered Tailoring
+                                        Smart Resume Builder
                                         <span className="text-[10px] bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded font-medium border border-blue-100">Upcoming</span>
                                     </div>
-                                    <div className="text-gray-500 text-xs mt-1">Match your skills to any JD with surgical precision.</div>
+                                    <div className="text-gray-500 text-xs mt-1">Tailor your resume to any job description with ease.</div>
                                 </div>
                             </div>
                         </div>
@@ -82,10 +82,10 @@ const HomeHero = () => {
                                 </div>
                                 <div className="flex-1">
                                     <div className="font-bold text-base text-gray-900 flex items-center justify-between">
-                                        Smart Job Tracker
+                                        Job Application Tracker
                                         <ArrowRight size={16} className="text-blue-500 opacity-100 group-hover:translate-x-1 transition-transform duration-300" />
                                     </div>
-                                    <div className="text-gray-500 text-xs mt-1">A dedicated CRM for your career.</div>
+                                    <div className="text-gray-500 text-xs mt-1">Organize all your applications in one professional dashboard.</div>
                                 </div>
                             </div>
                         </Link>

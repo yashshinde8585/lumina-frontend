@@ -5,7 +5,7 @@ import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable'
 import { motion } from 'framer-motion';
 import {
     Clock, Briefcase, LayoutList, Calculator, Code,
-    AlertCircle, CheckCircle, XCircle, Building, Plus, FileText
+    AlertCircle, CheckCircle, XCircle, Building, FileText
 } from 'lucide-react';
 import { SortableJobCard } from './SortableJobCard';
 import { BoardColumn, JobCard } from '../../../types';
@@ -104,13 +104,13 @@ export const KanbanColumn: React.FC<KanbanColumnProps> = ({
                         <div className="h-32 flex flex-col items-center justify-center text-center p-4 border-2 border-dashed border-gray-300 rounded-lg bg-gray-50/50">
                             {col.id === 'saved' ? (
                                 <div className="flex flex-col items-center gap-2">
-                                    <p className="text-sm font-medium text-gray-500">Drop a job here</p>
-                                    <p className="text-xs text-gray-400">Drag any job card into this column.</p>
+                                    <p className="text-sm font-medium text-gray-500">Add a job here</p>
+                                    <p className="text-xs text-gray-400">Drag a job card to this column.</p>
                                 </div>
                             ) : (
                                 <>
-                                    <p className="text-sm font-medium text-gray-500">Drop job here to update its stage</p>
-                                    <p className="text-xs text-gray-400 mt-1">Drag any job card into this column.</p>
+                                    <p className="text-sm font-medium text-gray-500">Add a job here to update its status</p>
+                                    <p className="text-xs text-gray-400 mt-1">Drag a job card to this column to update its status.</p>
                                 </>
                             )}
                         </div>

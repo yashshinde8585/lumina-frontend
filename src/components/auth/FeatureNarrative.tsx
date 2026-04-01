@@ -1,19 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Wand2, Layout } from 'lucide-react';
+import { Wand2, Layout, LucideIcon } from 'lucide-react';
 
-const FEATURES = [
+interface FeatureData {
+    title: string;
+    description: string;
+    icon: LucideIcon;
+    status: string;
+    statusColor: string;
+    iconBg: string;
+}
+
+const FEATURES: FeatureData[] = [
     {
-        title: "AI-Powered Tailoring",
-        description: "Match your skills to any JD with surgical precision. Our AI identifies gaps and bridges them instantly.",
+        title: "Smart Resume Builder",
+        description: "Tailor your resume to any job description. Our tools help you match the requirements perfectly.",
         icon: Wand2,
         status: "UPCOMING",
         statusColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
         iconBg: "bg-blue-600/20 text-blue-400"
     },
     {
-        title: "Smart Job Tracker",
-        description: "A dedicated CRM for your career. Manage every lead, follow-up, and offer in one central pipeline.",
+        title: "Job Application Tracker",
+        description: "Organize all your job applications in one place. Track every stage of your journey easily.",
         icon: Layout,
         status: "LIVE",
         statusColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
@@ -31,7 +40,7 @@ export const FeatureNarrative = () => {
     );
 };
 
-const FeatureCard = ({ data, index }) => (
+const FeatureCard = ({ data, index }: { data: FeatureData; index: number }) => (
     <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}

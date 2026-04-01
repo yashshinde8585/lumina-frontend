@@ -142,7 +142,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ columns, setColumns, onJobClick, hi
             ...col,
             items: col.items.filter(item => String(item.id) !== String(jobId))
         })));
-        toast.success("Job application removed");
+        toast.success("Application removed.");
     }, [columns, setColumns]);
 
     const handleStatusChange = useCallback((item: JobCard, oldColumnId: string, newColumnId: string) => {
@@ -189,7 +189,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ columns, setColumns, onJobClick, hi
         <div id="job-board" className="mt-8 mb-8">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between px-1 sm:px-2 mb-6 gap-4 sm:gap-4">
                 <h2 className="text-xl font-bold text-gray-900 tracking-tight">
-                    Applications Board
+                    Your Board
                 </h2>
 
                 {/* Filter Bar */}
@@ -270,7 +270,7 @@ const JobBoard: React.FC<JobBoardProps> = ({ columns, setColumns, onJobClick, hi
                                 <div className="absolute right-0 top-full mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-100 z-50 overflow-hidden animate-in fade-in zoom-in-95 duration-200">
                                     <div className="p-1 space-y-0.5 max-h-[400px] overflow-y-auto custom-scrollbar">
                                         <div className="px-3 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
-                                            Visible Columns
+                                            Manage Columns
                                         </div>
                                         {INITIAL_COLUMNS.map((col: any) => (
                                             <label

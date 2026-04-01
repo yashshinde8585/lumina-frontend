@@ -575,7 +575,7 @@ const Dashboard = () => {
                     <div className="mb-8 pt-4">
                         <div>
                             <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Dashboard</h1>
-                            <p className="text-gray-400 text-xs mt-1.5 font-medium">Track your applications and analyze your performance.</p>
+                            <p className="text-gray-400 text-xs mt-1.5 font-medium">View your application progress and analyze your success.</p>
                         </div>
                     </div>
 
@@ -588,7 +588,7 @@ const Dashboard = () => {
                     {loading ? (
                         <div className="flex flex-col items-center justify-center py-16">
                             <Loader2 className="animate-spin text-blue-600 mb-4" size={48} />
-                            <p className="text-gray-500 font-medium">Loading your resumes...</p>
+                            <p className="text-gray-500 font-medium">Loading your data...</p>
                         </div>
                     ) : (
                         <div id="dashboard-job-board">
@@ -630,10 +630,10 @@ const Dashboard = () => {
                             >
                                 <h3 className="text-xl font-bold text-charcoal mb-4 flex items-center gap-2">
                                     <FileText className="text-blue-600" />
-                                    Apply with Resume
+                                    Select a resume for your application
                                 </h3>
                                 <div className="bg-blue-50 p-3 rounded-lg border border-blue-100 mb-4 text-sm text-blue-800">
-                                    You are applying to <strong>{dropData?.columnId.toUpperCase()}</strong> with <strong>{dropData?.resumeTitle}</strong>
+                                    You are adding an application to the <strong>{dropData?.columnId}</strong> stage using <strong>{dropData?.resumeTitle}</strong>.
                                 </div>
 
                                 <div className="space-y-4">
@@ -649,7 +649,7 @@ const Dashboard = () => {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-xs font-semibold text-steel mb-1">ROLE (Optional)</label>
+                                        <label className="block text-xs font-semibold text-steel mb-1">JOB ROLE (Optional)</label>
                                         <input
                                             value={newJobRole}
                                             onChange={(e) => setNewJobRole(e.target.value)}
@@ -690,7 +690,7 @@ const Dashboard = () => {
                                     <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                                         <Edit2 size={16} />
                                     </div>
-                                    Tailor Resume
+                                    Optimize your resume
                                 </h3>
 
                                 <div className="space-y-4 mb-6">
@@ -711,8 +711,8 @@ const Dashboard = () => {
                                         <div className="text-sm text-blue-600 bg-blue-50 p-3 rounded-lg border border-blue-100 flex items-start gap-2">
                                             <CheckCircle size={16} className="mt-0.5" />
                                             <div>
-                                                <p className="font-semibold">Ready to Tailor</p>
-                                                <p>We will create a specific version of your resume optimized for this role.</p>
+                                                <p className="font-semibold">Ready to Optimize</p>
+                                                <p>We will create a version of your resume that matches this job description.</p>
                                             </div>
                                         </div>
                                     )}

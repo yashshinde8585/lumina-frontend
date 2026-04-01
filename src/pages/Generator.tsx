@@ -170,7 +170,7 @@ const Generator: React.FC = () => {
                 await authService.updateBoard(columns);
             }
 
-            toast.success("Job added to your tracker.");
+            toast.success("Job added to wishlist.");
 
             // Reset form
             setCompanyName('');
@@ -183,7 +183,7 @@ const Generator: React.FC = () => {
 
         } catch (error) {
             console.error(error);
-            toast.error("Could not add the job. Please try again.");
+            toast.error("Failed to add job to tracker.");
         } finally {
             setImportLoading(false);
         }
@@ -241,7 +241,7 @@ const Generator: React.FC = () => {
                                     </div>
                                     <div>
                                         <h2 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-gray-900 to-gray-600 tracking-tight">Job Details</h2>
-                                        <p className="text-sm font-medium text-gray-400">Manage your applications efficiently.</p>
+                                        <p className="text-sm font-medium text-gray-400">Manage efficiently</p>
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +298,7 @@ const Generator: React.FC = () => {
                                         </div>
                                         <div>
                                             <h3 className="text-sm font-semibold text-gray-800">External Application Tracker</h3>
-                                            <p className="text-xs text-gray-500 mt-0.5">Add a job you have applied for on another platform.</p>
+                                            <p className="text-xs text-gray-500 mt-0.5">Add a job you&apos;ve applied to externally.</p>
                                         </div>
                                     </div>
 
@@ -316,7 +316,7 @@ const Generator: React.FC = () => {
                                             </div>
                                         </div>
                                         <div className="space-y-1 group">
-                                            <label className="text-xs font-medium text-gray-600 ml-1">Job Position</label>
+                                            <label className="text-xs font-medium text-gray-600 ml-1">Role / Position</label>
                                             <div className="relative">
                                                 <input
                                                     value={role}
@@ -332,7 +332,7 @@ const Generator: React.FC = () => {
 
                                     {/* PDF Upload - Drag & Drop Area */}
                                     <div className="space-y-2 pt-2 pb-2">
-                                        <label className="text-xs font-medium text-gray-600 ml-1">Attach your resume <span className="text-gray-400">(PDF)</span></label>
+                                        <label className="text-xs font-medium text-gray-600 ml-1">Attach Resume <span className="text-gray-400">(PDF)</span></label>
                                         <div
                                             className={`relative overflow-hidden border border-dashed rounded-xl p-4 flex flex-col items-center justify-center transition-all cursor-pointer group hover:bg-blue-50/30 ${selectedFile ? 'border-blue-400/50 bg-blue-50/10' : 'border-gray-200 hover:border-blue-300'}`}
                                             style={{ backgroundImage: `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='12' ry='12' stroke='%23CACACAFF' stroke-width='1.5' stroke-dasharray='8%2c 8' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")`, border: 'none' }}
@@ -349,7 +349,7 @@ const Generator: React.FC = () => {
                                                 {selectedFile ? <FileText size={20} /> : <Upload size={20} className="text-blue-400/80" />}
                                             </div>
                                             <p className={`text-sm font-semibold transition-colors ${selectedFile ? 'text-blue-600' : 'text-gray-500 group-hover:text-gray-800'}`}>
-                                                {selectedFile ? selectedFile.name : 'Click to upload or drag and drop your file'}
+                                                {selectedFile ? selectedFile.name : 'Click to upload or drag and drop'}
                                             </p>
                                             {!selectedFile && <p className="text-[10px] text-gray-400 mt-1">PDFs only, up to 2MB</p>}
                                         </div>
@@ -361,7 +361,7 @@ const Generator: React.FC = () => {
                                         className="w-full relative flex items-center justify-center py-3 text-sm font-bold tracking-wide shadow-xl shadow-blue-500/20 rounded-xl bg-gradient-to-t from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 hover:shadow-blue-500/40 hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm transition-all duration-300 disabled:opacity-70 disabled:hover:translate-y-0"
                                     >
                                         {importLoading ? <Wand2 className="mr-2 animate-spin" size={16} /> : <Plus size={18} strokeWidth={3} className="mr-2" />}
-                                        {importLoading ? 'Adding...' : 'Add application'}
+                                        {importLoading ? 'Adding...' : 'Add to Job Tracker'}
                                     </Button>
                                 </motion.div>
                             ) : (

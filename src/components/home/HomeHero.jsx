@@ -1,100 +1,69 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { FileText, User, Zap, Settings, ArrowRight } from 'lucide-react';
+import { FileText, User, Zap, Settings, ArrowRight, PlayCircle } from 'lucide-react';
 import { toast } from 'sonner';
 import ScoreCounter from './ScoreCounter';
 
 import { authService } from '../../services/authService';
 
 const HomeHero = () => {
-    const isLoggedIn = !!authService.getToken();
+    // const isLoggedIn = !!authService.getToken();
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-28 md:pb-20 relative z-10 transition-all duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-32 md:pb-20 relative z-10 transition-all duration-300">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                 {/* LEFT COLUMN: Content */}
                 <div className="flex flex-col items-start text-left max-w-2xl mx-auto lg:mx-0 w-full">
-                    {/* Pill Badge */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 bg-white border border-blue-100/80 text-blue-700 px-4 py-1.5 rounded-full text-xs font-semibold mb-6 backdrop-blur-sm"
-                    >
-                        <span className="flex h-2 w-2 relative">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-                        </span>
-                        AI-Powered ATS Resume Builder
-                    </motion.div>
-
+                    
                     {/* Headline */}
                     <motion.h1
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.1 }}
-                        className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1] mb-6"
+                        className="text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 tracking-tight leading-[1.05] mb-6"
                     >
-                        Build your career path <br className="hidden lg:block" />
+                        Build your career <br className="hidden lg:block" />
                         with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">confidence</span>.
                     </motion.h1>
 
-                    {/* Subheadline */}
+                    {/* Subheadline with improved line height */}
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="text-base md:text-lg text-gray-500 leading-relaxed mb-8 max-w-lg"
+                        className="text-lg md:text-xl text-gray-500 leading-relaxed mb-8 max-w-lg"
                     >
                         Create a professional resume and track your job applications in one simple place. Our tools help you stand out and stay organized.
                     </motion.p>
 
-                    {/* Dual Feature Showcase (Buttons) */}
+                    {/* Main Actions: Primary & Secondary CTA */}
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
-                        className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-4 sm:gap-4 mb-8 w-full max-w-xl"
+                        className="flex flex-wrap items-center gap-4 mb-12"
                     >
-                        {/* Door A: Generate */}
-                        <div onClick={() => toast.info("Upcoming Feature: AI Generation is currently under development to bring you the best experience!")} className="group relative">
-
-                            <div className="relative h-full bg-white hover:bg-gray-50 text-gray-900 rounded-xl p-4 cursor-pointer transition-all border border-gray-200 hover:border-blue-300 flex items-center gap-4">
-                                <div className="h-12 w-12 rounded-full bg-blue-600 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                                    <Zap size={22} className="text-white" />
-                                </div>
-                                <div className="flex-1">
-                                    <div className="font-bold text-base text-gray-900 flex items-center gap-2">
-                                        Smart Resume Builder
-                                        <span className="text-[10px] bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded font-medium border border-blue-100">Upcoming</span>
-                                    </div>
-                                    <div className="text-gray-500 text-xs mt-1">Tailor your resume to any job description with ease.</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Door B: Track */}
-                        <Link to="/dashboard" className="group relative block">
-                            <div className="h-full bg-white hover:bg-gray-50 text-gray-900 rounded-xl p-4 cursor-pointer transition-all border border-gray-200 hover:border-blue-300 flex items-center gap-4 relative">
-                                <div className="h-12 w-12 rounded-full bg-blue-50 flex items-center justify-center shrink-0 text-blue-600 group-hover:scale-110 transition-transform duration-300">
-                                    <FileText size={22} />
-                                </div>
-                                <div className="flex-1">
-                                    <div className="font-bold text-base text-gray-900 flex items-center justify-between">
-                                        Job Application Tracker
-                                        <ArrowRight size={16} className="text-blue-500 opacity-100 group-hover:translate-x-1 transition-transform duration-300" />
-                                    </div>
-                                    <div className="text-gray-500 text-xs mt-1">Organize all your applications in one professional dashboard.</div>
-                                </div>
-                            </div>
+                        <Link
+                            to="/signup"
+                            className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold transition-all shadow-lg shadow-blue-500/25 flex items-center gap-2 group"
+                        >
+                            Start Building
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </Link>
+                        
+                        <button
+                            onClick={() => toast.info("Coming soon: A quick video tour of Lumina.")}
+                            className="px-6 py-4 bg-white border border-gray-200 hover:border-blue-200 text-gray-700 hover:text-blue-600 rounded-xl font-bold transition-all shadow-sm flex items-center gap-2 group"
+                        >
+                            <PlayCircle size={18} className="text-blue-500 group-hover:scale-110 transition-transform" />
+                            Watch Demo
+                        </button>
                     </motion.div>
-
-
                 </div>
 
-                {/* RIGHT COLUMN: Product Mockup - Visible on all screens now */}
+                {/* RIGHT COLUMN: Product Mockup */}
                 <motion.div
                     initial={{ opacity: 0, x: 40 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -102,13 +71,12 @@ const HomeHero = () => {
                     className="relative mt-8 lg:mt-0 w-full max-w-[500px] mx-auto lg:max-w-none"
                 >
                     {/* Mock Window */}
-                    {/* Mock Window Group - Refactored to allow floating elements to break free */}
                     <div className="relative z-10 w-full transform lg:rotate-[-2deg] hover:rotate-0 transition-transform duration-700 ease-out group">
 
-                        {/* The Actual Visual Window (Clipped Content) */}
-                        <div className="bg-white rounded-xl border border-gray-200/60 overflow-hidden relative shadow-sm">
+                        {/* The Actual Visual Window */}
+                        <div className="bg-white rounded-2xl border border-gray-200/60 overflow-hidden relative shadow-2xl">
                             {/* Window Header */}
-                            <div className="bg-gray-50 border-b border-gray-100 p-3 flex items-center gap-2">
+                            <div className="bg-gray-50/50 border-b border-gray-100 p-3 flex items-center gap-2">
                                 <div className="flex gap-1.5 pl-1">
                                     <div className="w-3 h-3 rounded-full bg-red-400/80"></div>
                                     <div className="w-3 h-3 rounded-full bg-yellow-400/80"></div>
@@ -120,7 +88,7 @@ const HomeHero = () => {
                             {/* UI Body */}
                             <div className="flex h-[350px] sm:h-[450px]">
                                 {/* Sidebar */}
-                                <div className="w-12 sm:w-16 bg-gray-50 border-r border-gray-100 flex flex-col items-center py-4 gap-4">
+                                <div className="w-12 sm:w-16 bg-gray-50/50 border-r border-gray-100 flex flex-col items-center py-4 gap-4">
                                     <div className="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center"><FileText size={16} className="sm:w-[18px] sm:h-[18px]" /></div>
                                     <div className="w-8 h-8 rounded-lg text-gray-400 hover:bg-gray-100 flex items-center justify-center"><User size={16} className="sm:w-[18px] sm:h-[18px]" /></div>
                                     <div className="w-8 h-8 rounded-lg text-gray-400 hover:bg-gray-100 flex items-center justify-center"><Zap size={16} className="sm:w-[18px] sm:h-[18px]" /></div>
@@ -128,7 +96,7 @@ const HomeHero = () => {
                                 </div>
 
                                 {/* Main Editor Area */}
-                                <div className="flex-1 bg-gray-100/50 p-4 sm:p-6 flex flex-col relative overflow-hidden">
+                                <div className="flex-1 bg-gray-100/30 p-4 sm:p-6 flex flex-col relative overflow-hidden">
                                     <div className="bg-white shadow-sm border border-gray-200 w-full h-full rounded p-4 sm:p-6 relative">
                                         <div className="h-4 sm:h-6 w-1/3 bg-gray-900/10 rounded mb-4"></div>
                                         <div className="h-3 sm:h-4 w-full bg-gray-100 rounded mb-2"></div>
@@ -141,7 +109,6 @@ const HomeHero = () => {
                                             <div className="h-2 sm:h-3 w-full bg-gray-50 rounded"></div>
                                         </div>
 
-                                        {/* Highlighted section (AI Suggestion Target) */}
                                         <div className="absolute top-1/2 left-4 right-4 sm:left-6 sm:right-6 p-1 border-2 border-blue-400/30 rounded-lg bg-blue-50/10 z-0"></div>
                                     </div>
                                 </div>
@@ -159,7 +126,7 @@ const HomeHero = () => {
                                             <div className="bg-green-500 h-1.5 rounded-full w-[80%]"></div>
                                         </div>
                                     </div>
-                                    <div className="mt-auto bg-blue-50 p-2 lg:p-3 rounded-lg border border-blue-100">
+                                    <div className="mt-auto bg-blue-50 p-2 lg:p-3 rounded-xl border border-blue-100">
                                         <p className="text-[9px] lg:text-[10px] text-blue-700 font-medium leading-tight">
                                             Resume passing ATS.
                                         </p>
@@ -168,48 +135,47 @@ const HomeHero = () => {
                             </div>
                         </div>
 
-                        {/* Floating Element 1: AI Suggestion Tooltip (Feature: Builder) */}
-                        <div className="absolute top-[40%] right-[-10px] sm:right-[-30px] bg-white shadow-xl border border-gray-100 rounded-lg p-2 sm:p-3 w-40 sm:w-48 z-20 animate-bounce-slow">
+                        {/* Floating Element 1: AI Suggestion */}
+                        <motion.div 
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.8 }}
+                            className="absolute top-[40%] right-[-10px] sm:right-[-30px] bg-white shadow-2xl border border-gray-100 rounded-xl p-3 w-40 sm:w-48 z-20"
+                        >
                             <div className="flex items-center gap-2 mb-2">
-                                <div className="w-4 h-4 sm:w-5 sm:h-5 bg-blue-100 rounded-full flex items-center justify-center text-blue-600"><Zap size={10} className="sm:w-[12px] sm:h-[12px]" /></div>
-                                <span className="text-[10px] sm:text-xs font-bold text-gray-800">AI Suggestion</span>
+                                <div className="w-5 h-5 bg-blue-100 rounded-full flex items-center justify-center text-blue-600"><Zap size={12} /></div>
+                                <span className="text-xs font-bold text-gray-800">AI Suggestion</span>
                             </div>
-                            <p className="text-[8px] sm:text-[10px] text-gray-600 leading-tight">Use stronger action verbs here like "Orchestrated" or "Spearheaded".</p>
-                        </div>
+                            <p className="text-[10px] text-gray-600 leading-relaxed">Use stronger action verbs like "Orchestrated" or "Spearheaded".</p>
+                        </motion.div>
 
-                        {/* Floating Element 2: Pipeline Card (Feature: Tracker) */}
-                        {/* Positioned bottom-left, overlapping the window boundary */}
+                        {/* Floating Element 2: Pipeline Card */}
                         <motion.div
                             initial={{ opacity: 0, y: 20, scale: 0.9 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             transition={{ delay: 0.6, duration: 0.6 }}
-                            className="absolute bottom-12 -left-4 sm:-left-12 bg-white rounded-lg shadow-xl border border-gray-200 p-3 w-40 sm:w-48 z-30"
+                            className="absolute bottom-12 -left-4 sm:-left-12 bg-white rounded-xl shadow-2xl border border-gray-100 p-4 w-40 sm:w-48 z-30"
                         >
-                            <div className="flex items-center justify-between mb-2">
-                                <div className="text-[10px] uppercase font-bold text-gray-400">Pipeline</div>
-                                <div className="h-1.5 w-1.5 rounded-full bg-green-500"></div>
+                            <div className="flex items-center justify-between mb-3 text-left">
+                                <div className="text-[10px] uppercase font-black text-gray-400 tracking-widest">In Pipeline</div>
+                                <div className="h-2 w-2 rounded-full bg-green-500 shadow-lg shadow-green-500/50"></div>
                             </div>
                             <div className="space-y-2">
-                                <div className="bg-blue-50 border border-blue-100 p-2 rounded text-left">
-                                    <div className="h-1.5 w-8 bg-blue-200 rounded mb-1"></div>
-                                    <div className="h-1 w-12 bg-blue-100 rounded"></div>
+                                <div className="bg-blue-50/50 border border-blue-100 p-2 rounded-lg text-left">
+                                    <div className="h-1.5 w-8 bg-blue-200 rounded-full mb-1"></div>
+                                    <div className="h-1 w-12 bg-blue-100 rounded-full"></div>
                                 </div>
-                                <div className="bg-purple-50 border border-purple-100 p-2 rounded text-left">
-                                    <div className="h-1.5 w-10 bg-purple-200 rounded mb-1"></div>
-                                    <div className="h-1 w-8 bg-purple-100 rounded"></div>
-                                </div>
-                                <div className="bg-gray-50 border border-gray-100 p-2 rounded text-left">
-                                    <div className="h-1.5 w-6 bg-gray-200 rounded mb-1"></div>
-                                    <div className="h-1 w-10 bg-gray-100 rounded"></div>
+                                <div className="bg-purple-50/50 border border-purple-100 p-2 rounded-lg text-left">
+                                    <div className="h-1.5 w-10 bg-purple-200 rounded-full mb-1"></div>
+                                    <div className="h-1 w-8 bg-purple-100 rounded-full"></div>
                                 </div>
                             </div>
                         </motion.div>
-
                     </div>
 
                     {/* Decor elements behind mockup */}
-                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-                    <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+                    <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
                 </motion.div>
             </div>
         </div>

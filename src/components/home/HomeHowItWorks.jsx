@@ -28,8 +28,8 @@ const HomeHowItWorks = () => {
                         viewport={{ once: true }}
                         className="text-4xl md:text-5xl font-heading font-bold text-gray-900 mb-6 tracking-tight leading-tight"
                     >
-                        Create your resume in <br />
-                        <span className="text-purple-600">3 simple steps</span>
+                        Launch your career in <br />
+                        <span className="text-purple-600">three simple steps</span>
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const HomeHowItWorks = () => {
                         transition={{ delay: 0.1 }}
                         className="text-lg text-gray-600 leading-relaxed"
                     >
-                        We are developing a unique, rigorous process to ensure your resume stands out. <br className="hidden md:block" />Designed to make your life easy and get you hired.
+                        Our simple process helps you focus on what matters most: getting hired.
                     </motion.p>
                 </div>
 
@@ -55,9 +55,9 @@ const HomeHowItWorks = () => {
                             className="relative pl-8 md:pl-0"
                         >
                             <span className="absolute -left-4 md:-left-12 -top-1 font-bold text-6xl md:text-8xl text-blue-100/50 -z-10 select-none">1</span>
-                            <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4 tracking-tight">Paste the job description</h3>
+                            <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4 tracking-tight">Analyze the job description</h3>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                Drop the JD from LinkedIn, Naukri or company career pages. We extract the keywords that matter and identify the skills gaps.
+                                Paste a job post to identify the most important skills and keywords for your resume.
                             </p>
                             <div className="flex gap-2">
                                 <span className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold">JD Analysis</span>
@@ -225,9 +225,9 @@ const HomeHowItWorks = () => {
                             className="relative pl-8 md:pl-0 md:order-2 order-1"
                         >
                             <span className="absolute -left-4 md:-left-12 -top-1 font-bold text-6xl md:text-8xl text-purple-100/50 -z-10 select-none">2</span>
-                            <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4 tracking-tight">Choose your experience & template</h3>
+                            <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4 tracking-tight">Customize your profile</h3>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                Select your projects, skills and preferred resume layout. We auto-format everything to ensure perfect margins and spacing.
+                                Input your experience and choose from our professional, ATS-friendly templates.
                             </p>
                             <div className="flex gap-2">
                                 <span className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs font-semibold">Auto-Formatting</span>
@@ -247,9 +247,9 @@ const HomeHowItWorks = () => {
                             className="relative pl-8 md:pl-0"
                         >
                             <span className="absolute -left-4 md:-left-12 -top-1 font-bold text-6xl md:text-8xl text-green-100/50 -z-10 select-none">3</span>
-                            <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4 tracking-tight">Generate & polish in our AI editor</h3>
+                            <h3 className="text-2xl md:text-3xl font-heading font-bold text-gray-900 mb-4 tracking-tight">Refine and download</h3>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                Optimize keywords, formatting and ATS score in real time. Get instant feedback and suggestions to improve your impact.
+                                Use our smart editor to polish your content and download your final resume.
                             </p>
                             <div className="flex gap-2">
                                 <span className="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs font-semibold">Real-time ATS Score</span>

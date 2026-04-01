@@ -116,11 +116,11 @@ const Login: React.FC = () => {
                     {/* Heading */}
                     <div className="mb-20">
                         <h1 className="text-5xl font-bold text-white leading-[1.1] mb-4">
-                            The Future of the <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Job Search</span>.
+                            Your journey <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">starts here</span>.
                         </h1>
                         <p className="text-lg text-slate-400 leading-relaxed">
-                            One platform to build, track, and win.
+                            Build your resume and track your success in one simple place.
                         </p>
                     </div>
 
@@ -156,8 +156,8 @@ const Login: React.FC = () => {
                         >
                             {/* Heading Group */}
                             <div className="mb-8">
-                                <h2 className="text-3xl font-bold text-slate-900 mb-2">Welcome Back</h2>
-                                <p className="text-slate-500 text-sm">Enter your credentials to access your dashboard.</p>
+                                <h2 className="text-3xl font-bold text-slate-900 mb-2">Welcome back.</h2>
+                                <p className="text-slate-500 text-sm">Please enter your details to access your account.</p>
                             </div>
 
                             {/* Form with Proper Spacing */}
@@ -221,7 +221,7 @@ const Login: React.FC = () => {
                                         </div>
                                     ) : (
                                         <span className="flex items-center justify-center gap-2">
-                                            Continue <Sparkles size={16} className="text-blue-200" />
+                                            Sign in <Sparkles size={16} className="text-blue-200" />
                                         </span>
                                     )}
                                 </Button>
@@ -232,7 +232,7 @@ const Login: React.FC = () => {
 
                 {/* Footer - Absolute Bottom */}
                 <div className="absolute bottom-6 text-xs text-gray-400">
-                    © 2025 Lumina. Secure by automated magic.
+                    © 2025 Lumina. All rights reserved.
                 </div>
             </div>
         </div>

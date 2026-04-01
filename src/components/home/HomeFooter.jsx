@@ -31,7 +31,7 @@ const HomeFooter = () => {
                             <span className="font-heading font-bold text-2xl text-white tracking-tight">Lumina</span>
                         </Link>
                         <p className="text-gray-400 text-sm max-w-xs leading-relaxed">
-                            The smartest way to build, track, and optimize your resume for modern hiring systems.
+                            A simple way to build your resume and organize your job search. Join us to start your next chapter with confidence.
                         </p>
                     </div>
 

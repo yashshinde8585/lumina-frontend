@@ -164,11 +164,11 @@ const Signup: React.FC = () => {
                     {/* Heading */}
                     <div className="mb-20">
                         <h1 className="text-5xl font-bold text-white leading-[1.1] mb-4">
-                            The Future of the <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Job Search</span>.
+                            Your journey <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">starts here</span>.
                         </h1>
                         <p className="text-lg text-slate-400 leading-relaxed">
-                            One platform to build, track, and win.
+                            Build your resume and track your success in one simple place.
                         </p>
                     </div>
 
@@ -202,8 +202,8 @@ const Signup: React.FC = () => {
                     >
                         {/* Heading Group */}
                         <div className="mb-8 text-left w-full">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-2">Create your account</h2>
-                            <p className="text-slate-500 text-sm">Join Lumina and start tracking your job search journey.</p>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-2">Create your account.</h2>
+                            <p className="text-slate-500 text-sm">Join us to start building your resume and tracking your applications.</p>
                         </div>
 
                         {/* Form with Proper Spacing */}
@@ -293,7 +293,7 @@ const Signup: React.FC = () => {
                                 {isLoading ? (
                                     <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                                 ) : (
-                                    <>Get Started <ArrowRight size={16} /></>
+                                    <>Create account <ArrowRight size={16} /></>
                                 )}
                             </Button>
                         </form>
@@ -302,7 +302,7 @@ const Signup: React.FC = () => {
 
                 {/* Footer - Absolute Bottom */}
                 <div className="absolute bottom-6 text-xs text-gray-400">
-                    © 2025 Lumina. Secure by automated magic.
+                    © 2025 Lumina. All rights reserved.
                 </div>
             </div>
         </div>

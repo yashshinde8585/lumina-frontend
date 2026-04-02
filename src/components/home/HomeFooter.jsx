@@ -8,9 +8,7 @@ const HomeFooter = () => {
 
     const footerLinks = {
         product: [
-            { label: 'Resume Builder', href: '/generate', isExternal: false },
-            { label: 'ATS Checker', href: '#features', isExternal: false },
-            { label: 'Templates', href: '#features', isExternal: false },
+            { label: 'Resume Builder', href: '/generate', isExternal: false }
         ]
     };
 
@@ -46,12 +44,7 @@ const HomeFooter = () => {
                                 {link.label}
                             </Link>
                         ))}
-                        <a
-                            href="mailto:support@lumina.ai"
-                            className="text-gray-400 hover:text-white font-medium transition-colors text-sm"
-                        >
-                            Contact
-                        </a>
+                        {/* Contact info removed */}
                     </div>
 
                     {/* Socials */}
@@ -59,9 +52,6 @@ const HomeFooter = () => {
 
                         <a href="https://www.linkedin.com/in/yashshinde8585/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-blue-700 hover:border-blue-600 hover:text-white transition-all group">
                             <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
-                        </a>
-                        <a href="#" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:bg-gray-800 hover:border-gray-700 hover:text-white transition-all group">
-                            <Github size={18} className="group-hover:scale-110 transition-transform" />
                         </a>
                     </div>
                 </div>
@@ -72,8 +62,6 @@ const HomeFooter = () => {
                         © {currentYear} Lumina. All rights reserved.
                     </p>
                     <div className="flex gap-6">
-                        <a href="#" className="text-gray-600 hover:text-gray-400 text-xs transition-colors">Privacy Policy</a>
-                        <a href="#" className="text-gray-600 hover:text-gray-400 text-xs transition-colors">Terms of Service</a>
                     </div>
                 </div>
             </div>

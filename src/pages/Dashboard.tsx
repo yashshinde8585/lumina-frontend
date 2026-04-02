@@ -571,13 +571,7 @@ const Dashboard = () => {
                 {/* Main Content */}
                 <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-                    {/* Header Actions */}
-                    <div className="mb-8 pt-4">
-                        <div>
-                            <h1 className="text-3xl font-bold text-gray-900 tracking-tight">Dashboard</h1>
-                            <p className="text-gray-400 text-xs mt-1.5 font-medium">View your application progress and analyze your success.</p>
-                        </div>
-                    </div>
+                    {/* Header Actions - Removed */}
 
                     {/* Top Section - Analytics */}
                     <div id="dashboard-analytics">
